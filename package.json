@@ -1,0 +1,49 @@
+{
+  "name": "automation-javascript-template",
+  "displayName": "automation javascript template",
+  "description": "",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antian369/automation-javascript-template.git"
+  },
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ajs",
+        "aliases": [
+          "ajs",
+          "AJS"
+        ],
+        "extensions": [
+          ".ajs"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ajs",
+        "scopeName": "source.ajs",
+        "path": "./syntaxes/auto.javascript.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.javascript": "javascript"
+        }
+      }
+    ],
+    "configurationDefaults": {
+      "files.associations": {
+        "*.ajs": "javascript"
+      },
+      "emmet.includeLanguages": {
+        "ajs": "javascript"
+      }
+    }
+  }
+}
